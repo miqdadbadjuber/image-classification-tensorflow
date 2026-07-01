@@ -1,12 +1,16 @@
 # Image Classification using TensorFlow
 
-A Convolutional Neural Network (CNN) project for classifying natural scene images into six natural scene categories using TensorFlow and Keras.
+A Convolutional Neural Network (CNN) project for classifying natural scene images into six categories using TensorFlow and Keras.
+
+---
 
 ## Overview
 
-This project was developed as an end-to-end image classification pipeline using TensorFlow.
+This project implements an end-to-end image classification pipeline using TensorFlow.
 
-The model was trained on the Intel Image Classification dataset and exported into multiple deployment formats, including TensorFlow SavedModel, TensorFlow Lite, and TensorFlow.js.
+The model is trained on the Intel Image Classification dataset and exported into multiple deployment formats for desktop, mobile, and web deployment.
+
+---
 
 ## Dataset
 
@@ -19,6 +23,8 @@ The model was trained on the Intel Image Classification dataset and exported int
 - Sea
 - Street
 
+---
+
 ## Features
 
 - CNN-based image classification
@@ -30,11 +36,15 @@ The model was trained on the Intel Image Classification dataset and exported int
 - TensorFlow.js export
 - Sample image prediction
 
+---
+
 ## Project Structure
 
 ```text
 image-classification-tensorflow/
 ├── assets/
+│   ├── training-history.png
+│   └── sample-prediction.png
 ├── images/
 ├── models/
 │   ├── saved_model/
@@ -45,35 +55,56 @@ image-classification-tensorflow/
 └── README.md
 ```
 
+---
+
 ## Model Performance
 
 | Metric | Value |
-| :------ | ----: |
+|--------|--------:|
 | Test Accuracy | **88.00%** |
 | Test Loss | **0.3406** |
 
-The model achieved **88.00% accuracy** on the test dataset.
+The model was evaluated on the Intel Image Classification test dataset.
+
+### Training History
+
+![Training History](assets/training-history.png)
+
+---
+
+## Sample Prediction
+
+Prediction Result:
+
+- **Predicted Class:** Glacier
+- **Confidence:** **97.64%**
+
+![Sample Prediction](assets/sample-prediction.png)
+
+---
 
 ## Model Architecture
 
-The CNN model consists of:
+The CNN architecture consists of:
 
 - 4 Convolutional layers
 - Max Pooling layers
 - Flatten layer
 - Dense (512 neurons, ReLU)
 - Dropout (0.3)
-- Output layer (Softmax, 6 classes)
+- Softmax output layer (6 classes)
+
+---
 
 ## Exported Models
 
-The trained model is available in three deployment formats.
-
-| Format | Purpose |
-| :------ | :------ |
+| Format | Description |
+|--------|-------------|
 | TensorFlow SavedModel | TensorFlow deployment |
-| TensorFlow Lite (.tflite) | Mobile & Edge devices |
+| TensorFlow Lite (.tflite) | Mobile & Edge deployment |
 | TensorFlow.js | Browser inference |
+
+---
 
 ## Technologies
 
@@ -83,6 +114,8 @@ The trained model is available in three deployment formats.
 - NumPy
 - Matplotlib
 
+---
+
 ## Future Improvements
 
 - Improve classification accuracy
@@ -90,6 +123,8 @@ The trained model is available in three deployment formats.
 - Hyperparameter tuning
 - Web deployment using TensorFlow.js
 - Android deployment using TensorFlow Lite
+
+---
 
 ## Author
 
